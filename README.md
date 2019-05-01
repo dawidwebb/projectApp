@@ -58,12 +58,12 @@ Structure of this file:
 
 Container works as a process which is pass in command 'docker run'. To container you can refer by name or container id.
 To check short container id by type: **docker ps** or long container id by **docker inspect name of image' **.  To check stopped containers:
-	- docker ps -a,
-	- docker container ls -a
+ - **docker ps -a**,
+ - **docker container ls -a**
 
 Find docker container by **docker container ls -s**. To start container **docker start 'container id'** to stop conatiner **docker stop 'container id'**.
 
-Inject additional process to running container **docker exec <containerID> command'**.
+Inject additional process to running container **docker exec 'container ids' 'command'**.
 
 Remove stopped containers **docker rm 'container id'**.
 
