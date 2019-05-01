@@ -40,16 +40,16 @@ To create docker images we need to define file calls **Dockerfile**. It's config
 
 Structure of this file:
 - **FROM**
- - describes base image,
+  - describes base image,
 - **RUN**
- - describes command to be executed in new layer on top of current image,
+  - describes command to be executed in new layer on top of current image,
 - **CMD**
- - desribes default command to be executed after container will be created,
- - it's not executed in creating the process of the image build,
- - appears only once in **DOCKERFILE** if there will be more than one only the latest will be to act on,
- - could be changed in starting process of container,
+  - desribes default command to be executed after container will be created,
+  - it's not executed in creating the process of the image build,
+  - appears only once in **DOCKERFILE** if there will be more than one only the latest will be to act on,
+  - could be changed in starting process of container,
 - **EXPOSE**
- - describe Docker that the container listens on the specified network ports at runtime,
+  - describe Docker that the container listens on the specified network ports at runtime,
 - **ENTRYPOINT**
   - CMD and ENTRYPOINT they are not the same instructions
   - describe command which allows container to be run as an executable 
