@@ -39,18 +39,18 @@ Each image contains:
 To create docker images we need to define file calls **Dockerfile**. It's configuration file consist of instructions (steps) which take part in image build.
 
 Structure of this file:
-**FROM**
+- **FROM**
  - describes base image,
- **RUN**
+- **RUN**
  - describes command to be executed in new layer on top of current image,
-**CMD**
+- **CMD**
  - desribes default command to be executed after container will be created,
  - it's not executed in creating the process of the image build,
  - appears only once in **DOCKERFILE** if there will be more than one only the latest will be to act on,
  - could be changed in starting process of container,
-**EXPOSE**
+- **EXPOSE**
  - describe Docker that the container listens on the specified network ports at runtime,
- **ENTRYPOINT**
+- **ENTRYPOINT**
   - CMD and ENTRYPOINT they are not the same instructions
   - describe command which allows container to be run as an executable 
  
@@ -69,4 +69,4 @@ Remove stopped containers **docker rm 'container id'**.
 
 If you want to remove local images it will not be able for running or stopped containers. 
 
-> CHeat sheet not completed !!!
+> Cheat sheet not completed !!!
