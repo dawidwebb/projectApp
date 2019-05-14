@@ -1,5 +1,32 @@
 # Docker cheat sheet
 
+### A couple useful commands
+- [docker images](https://docs.docker.com/engine/reference/commandline/images/)   display all images
+- [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)   remove an image
+- [docker rmi $(docker images -q)](https://docs.docker.com/engine/reference/commandline/rmi/)   remove all images based on ID
+- [docker build](https://docs.docker.com/engine/reference/commandline/build/)   create an image
+- [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)   shows running containers
+- [docker kill](https://docs.docker.com/engine/reference/commandline/kill/)   kill a container
+
+- [docker container ls -a]()   shows all conatiners
+- [docker conatiner rm](https://docs.docker.com/engine/reference/commandline/container_rm/)   remova container
+- [docker conatiner rm $(docker container -a -q)](https://docs.docker.com/engine/reference/commandline/container_rm/) remove all containers
+- [docker container logs](https://docs.docker.com/engine/reference/commandline/container_logs/) shows logg of container
+
+- [docker network create](https://docs.docker.com/engine/reference/commandline/network_create/)   create network based on name
+- [docker network ls](https://docs.docker.com/engine/reference/commandline/network/)   shows all networks
+- [docker network prune](https://docs.docker.com/engine/reference/commandline/network_prune/)   remove unused networks
+- [docker network rm](https://docs.docker.com/engine/reference/commandline/network_rm/)   remove network
+
+- [docker-compose logs](https://docs.docker.com/compose/reference/logs/)   shows container logs based on name of service
+- [docker-compose logs -f service-name](https://docs.docker.com/compose/reference/logs/)   shows container logs follow logs
+- [docker-compose build](https://docs.docker.com/compose/reference/build/)   rebuild or create images
+- [docker-compose up](https://docs.docker.com/compose/reference/up/)   starts containers
+- [docker-compose down](https://docs.docker.com/compose/reference/down/)   stop containers  
+- [docker-compose restart](https://docs.docker.com/compose/reference/restart/)  restarting docker conatiners
+
+ ## [Docker cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
+
 ## Advantage of docker
  - the quick app development cycle
    -- lack of compatibility problems between environments,
