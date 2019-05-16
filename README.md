@@ -1,30 +1,34 @@
 # Docker cheat sheet
 
-### A couple useful commands
-- [docker images](https://docs.docker.com/engine/reference/commandline/images/)   display all images
+## A couple useful commands
+
+### Remove/kill command
 - [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)   remove an image
 - [docker rmi $(docker images -q)](https://docs.docker.com/engine/reference/commandline/rmi/)   remove all images based on ID
-- [docker build](https://docs.docker.com/engine/reference/commandline/build/)   create an image
-- [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)   shows running containers
 - [docker kill](https://docs.docker.com/engine/reference/commandline/kill/)   kill a container
-- [docker exec](https://docs.docker.com/engine/reference/commandline/exec/) execute command within running container
-
-- [docker container ls -a]()   shows all conatiners
-- [docker conatiner rm](https://docs.docker.com/engine/reference/commandline/container_rm/)   remova container
+- - [docker conatiner rm](https://docs.docker.com/engine/reference/commandline/container_rm/)   remova container
 - [docker conatiner rm $(docker container -a -q)](https://docs.docker.com/engine/reference/commandline/container_rm/) remove all containers
-- [docker container logs](https://docs.docker.com/engine/reference/commandline/container_logs/) shows logg of container
-
-- [docker network create](https://docs.docker.com/engine/reference/commandline/network_create/)   create network based on name
-- [docker network ls](https://docs.docker.com/engine/reference/commandline/network/)   shows all networks
 - [docker network prune](https://docs.docker.com/engine/reference/commandline/network_prune/)   remove unused networks
 - [docker network rm](https://docs.docker.com/engine/reference/commandline/network_rm/)   remove network
-
+### Shows images/conatiners/networks/logs
+- [docker images](https://docs.docker.com/engine/reference/commandline/images/)   display all images
+- [docker container ls -a]()   shows all conatiners
 - [docker-compose logs](https://docs.docker.com/compose/reference/logs/)   shows container logs based on name of service
 - [docker-compose logs -f service-name](https://docs.docker.com/compose/reference/logs/)   shows container logs follow logs
+- [docker network ls](https://docs.docker.com/engine/reference/commandline/network/)   shows all networks
+- [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)   shows running containers
+### Create image/container/network
+- [docker build](https://docs.docker.com/engine/reference/commandline/build/)   create an image from Dockerfile
+- [docker network create](https://docs.docker.com/engine/reference/commandline/network_create/)   create network based on name
 - [docker-compose build](https://docs.docker.com/compose/reference/build/)   rebuild or create images
+
+### Starts contaiers
+- [docker exec](https://docs.docker.com/engine/reference/commandline/exec/) execute command within running container
 - [docker-compose up](https://docs.docker.com/compose/reference/up/)   starts containers
 - [docker-compose down](https://docs.docker.com/compose/reference/down/)   stop containers  
 - [docker-compose restart](https://docs.docker.com/compose/reference/restart/)  restarting docker conatiners
+- [docker start](https://docs.docker.com/engine/reference/commandline/start/)   starts stopped container
+- [docker stop](https://docs.docker.com/engine/reference/commandline/stop/)   stop running container
 
  ## [Docker cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
 
@@ -66,6 +70,8 @@ Each image contains:
 
 To create docker images we need to define file calls **Dockerfile**. It's configuration file consist of instructions (steps) which take part in image build.
 
+## Dockerfile
+
 Structure of this file:
 - **FROM**
   - describes base image,
@@ -82,7 +88,7 @@ Structure of this file:
   - CMD and ENTRYPOINT they are not the same instructions
   - describe command which allows container to be run as an executable 
  
- Docker image is a pattern for creating a container so the instance of images is a container. If we build image it can be stored on Docker Hub or local registry. 
+Docker image is a pattern for creating a container so the instance of images is a container. If we build image it can be stored on Docker Hub or local registry. 
 
 Container works as a process which is pass in command 'docker run'. To container you can refer by name or container id.
 To check short container id by type: **docker ps** or long container id by **docker inspect name of image' **.  To check stopped containers:
@@ -97,4 +103,4 @@ Remove stopped containers **docker rm 'container id'**.
 
 If you want to remove local images it will not be able for running or stopped containers. 
 
-> Cheat sheet not completed !!!
+> TODO!!!
