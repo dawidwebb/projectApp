@@ -18,6 +18,7 @@ To check pulled image just type:
 `docker images`
 
 >REPOSITORY                   TAG                 IMAGE ID            CREATED             SIZE
+
 >tomcat                       latest              3639174793ba        21 hours ago        463MB
 
 This image shoulde be avaliable as repository `tomcat` with tag `latest`, docker engine use default tag in docker which is `latest`. 
@@ -25,9 +26,9 @@ This image shoulde be avaliable as repository `tomcat` with tag `latest`, docker
 ## Run docker image
 
 The run command:
-`docker run -it --rm -p 8888:8080 tomcat:8.0`
-Tomcat will be avaliable under this address:
+- `docker run -it --rm -p 8888:8080 tomcat:8.0`
 
+Tomcat will be avaliable under this address:
 http://localhost:8888
 
 But if you want to go to manager of Tomcat you will be provide credentials.
@@ -57,14 +58,15 @@ docker run -it -p 8888:8080 -v {absolute-path}/tomcat-users.xml:{absolute-path}/
 - `{absolute-path}/conf/tomcat-users.xml` target path for Tomcat  
 
 To check if a file in the container was changed, execute the command within running container. To do that get id of your container:
-`docker container ps` and type:
-`docker exec -it <container-is> cat {absolute-path}/conf/tomcat-users.xml`
+-`docker container ps` 
+and type:
+-`docker exec -it <container-is> cat {absolute-path}/conf/tomcat-users.xml`
 
 ## Restart container
 
 At the end try to restart docker container by execute two commands and previos container id:
-docker stop <docker-container>
-docker start <docker-container>
+- `docker stop <docker-container>`
+- `docker start <docker-container>`
 
 Now, you are able to access to manager and uplaod .war fiels.
 
