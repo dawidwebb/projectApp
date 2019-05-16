@@ -50,9 +50,9 @@ To be able to get to the manager of Tomcat to upload .war files you need to chan
 > <user username="tomcat" password="tomcat" roles="manager-gui,manager-script,manager-jmx,manager-status"/>
 
 Stop container by command:
-docker stop <container-id>
+-` docker stop <container-id>`
 and the type:
-docker run -it -p 8888:8080 -v {absolute-path}/tomcat-users.xml:{absolute-path}/conf/tomcat-users.xml tomcat
+- `docker run -it -p 8888:8080 -v {absolute-path}/tomcat-users.xml:{absolute-path}/conf/tomcat-users.xml tomcat`
 
 - `{absolute-path}/tomcat-users.xml` path to new file on your computer
 - `{absolute-path}/conf/tomcat-users.xml` target path for Tomcat  
