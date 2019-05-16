@@ -7,6 +7,7 @@
 - [docker build](https://docs.docker.com/engine/reference/commandline/build/)   create an image
 - [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)   shows running containers
 - [docker kill](https://docs.docker.com/engine/reference/commandline/kill/)   kill a container
+- [docker exec](https://docs.docker.com/engine/reference/commandline/exec/) execute command within running container
 
 - [docker container ls -a]()   shows all conatiners
 - [docker conatiner rm](https://docs.docker.com/engine/reference/commandline/container_rm/)   remova container
