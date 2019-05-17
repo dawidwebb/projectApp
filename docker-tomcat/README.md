@@ -44,7 +44,7 @@ By default in Tomcat directory called `conf` consist `tomcat-users.xml` file whi
 ## Prepare new tomcat-users.xml and run dokcer
 To be able to get to the manager of Tomcat to upload .war files you need to change `tomcat-users.xml` file to contain proper configuration:
 
-```
+```xml
  <role rolename="manager-script"/>
  <role rolename="manager-jmx"/>
  <role rolename="manager-status"/>
