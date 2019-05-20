@@ -4,35 +4,31 @@
 
 To create docker images we need to define file calls **Dockerfile**. It's configuration file consist of instructions (steps) which take part in image build.
 
-Description and goal of each layer:
+Description and gal of each layer:
 - **FROM**
-  - create base layer base on image `openjdk:8-jre-alpine`,
-<!-- 
-- **RUN**
-  - describes command to be executed in new layer on top of current image,
-- **CMD**
-  - desribes default command to be executed after container will be created,
-  - it's not executed in creating the process of the image build,
-  - appears only once in **DOCKERFILE** if there will be more than one only the latest will be to act on,
-  - could be changed in starting process of container,
-- **EXPOSE**
-  - describe Docker that the container listens on the specified network ports at runtime,
-- **ENTRYPOINT**
-  - CMD and ENTRYPOINT they are not the same instructions
-  - describe command which allows container to be run as an executable 
- 
-Docker image is a pattern for creating a container so the instance of images is a container. If we build image it can be stored on Docker Hub or local registry. 
+  - every single proper image must start with the instruction `FROM` as a parent image, in this case, it's `openjdk:8-jre-alpin`. We sets java jdk to be able run springboot microservice.
+- **ARG** variable that can be use in built-time in Dockerfile. In this case we set variable `VERSION` for a target build of microservice.
+- **VOLUME** as documentation says it's a mount point, so it means. This is mechanism for persist data ganarated by container in this case /tmp directory is needed for Tomcat. Even if we remove container we can use volume created before by -v command. 
+- **EXPOSE** indicate that container listen on specific port.
+- **ADD** add files to the filesystem of the image. We adding it to the `add.jar`.
+- **RUN** it run execute commands in a image layer. Update timestamp and make sure that file is exists.
+- **ENTRYPOINT** take part in process of creating container as an executable.
 
-Each image contains:
-- tag  
-  - used to logically tag images e.g respsitory/name:tag
-  - default tag is 'latest'
-  - images can have more than one tag
-  - docker hub helps to list tag's for image
-- image id
-  - used to uniquely identify the image.
-- created 
-  - the number of days since the image was created.
-- virtual size 
-  - the size of the image
- -->
+[Dockerfile commands](https://docs.docker.com/engine/reference/builder)
+
+### How to run
+Firstly, execute: 
+- `mvn clean install`
+to build project and get /target directory. 
+
+Then build docker image.
+- `docker build -t "docker-microservice:dockerfile" .`
+
+If everything goes ok should be see this message:
+`Successfully tagged docker-microservice:dockerfile`
+
+To create container from image just type:
+- `docker run docker-microservice:dockerfile`
+
+Microservice shoulde be avaliable under this location:
+ - http://localhost:8089
