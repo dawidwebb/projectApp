@@ -4,9 +4,10 @@
 
 To create docker images we need to define file calls **Dockerfile**. It's configuration file consist of instructions (steps) which take part in image build.
 
-Structure of this file:
+Description and goal of each layer:
 - **FROM**
-  - describes base image,
+  - create base layer base on image `openjdk:8-jre-alpine`,
+<!-- 
 - **RUN**
   - describes command to be executed in new layer on top of current image,
 - **CMD**
@@ -34,3 +35,4 @@ Each image contains:
   - the number of days since the image was created.
 - virtual size 
   - the size of the image
+ -->
