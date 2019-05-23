@@ -1,4 +1,4 @@
-# How to create own docker images TODO
+# How to create own docker images
 
 ## Dockerfile
 
