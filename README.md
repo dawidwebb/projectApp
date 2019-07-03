@@ -7,8 +7,8 @@
 - [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)   remove an image
 - [docker rmi $(docker images -q)](https://docs.docker.com/engine/reference/commandline/rmi/)   remove all images based on ID
 - [docker kill](https://docs.docker.com/engine/reference/commandline/kill/)   kill a container
-- [docker conatiner rm](https://docs.docker.com/engine/reference/commandline/container_rm/)   remove container
-- [docker conatiner rm $(docker container -a -q)](https://docs.docker.com/engine/reference/commandline/container_rm/) remove all containers
+- [docker container rm](https://docs.docker.com/engine/reference/commandline/container_rm/)   remove container
+- [docker container rm $(docker container ls -a -q)](https://docs.docker.com/engine/reference/commandline/container_rm/) remove all containers
 - [docker network prune](https://docs.docker.com/engine/reference/commandline/network_prune/)   remove unused networks
 - [docker network rm](https://docs.docker.com/engine/reference/commandline/network_rm/)   remove network
 - [docker image prune](https://docs.docker.com/engine/reference/commandline/image_prune/)   remove unused imges
