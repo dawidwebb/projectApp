@@ -6,6 +6,8 @@
 ### Remove/kill command
 - [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)   remove an image
 - [docker rmi $(docker images -q)](https://docs.docker.com/engine/reference/commandline/rmi/)   remove all images based on ID
+- [docker rmi $(docker images -q | head -n +2)](https://docs.docker.com/engine/reference/commandline/rmi/)   remove 2 recently created images based on ID
+- [docker rmi $(docker images -q | tail -n +2)](https://docs.docker.com/engine/reference/commandline/rmi/)   remove 2 the most oldest created images based on ID
 - [docker kill](https://docs.docker.com/engine/reference/commandline/kill/)   kill a container
 - [docker container rm](https://docs.docker.com/engine/reference/commandline/container_rm/)   remove container
 - [docker container rm $(docker container ls -a -q)](https://docs.docker.com/engine/reference/commandline/container_rm/) remove all containers
