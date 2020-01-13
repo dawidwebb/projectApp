@@ -43,6 +43,11 @@
 - [docker-compose up](https://docs.docker.com/compose/reference/up/)   starts containers
 - [docker-compose down](https://docs.docker.com/compose/reference/down/)   stop containers  
 
+### Logs
+- [sudo docker-compose logs -f --tail 100](https://docs.docker.com/engine/reference/commandline/logs/) shows application logs with a last 100 lines
+- [sudo docker-compose logs -f <service>](https://docs.docker.com/engine/reference/commandline/logs/) whows logs of a specific service
+
+
 ## [Docker cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
 
 ## [Docker architecture](https://docs.docker.com/engine/docker-overview/)
