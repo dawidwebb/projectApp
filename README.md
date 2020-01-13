@@ -17,14 +17,12 @@
 - [docker volume prune](https://docs.docker.com/engine/reference/commandline/volume_prune/)   remove unused volumes
 - [docker volume rm](https://docs.docker.com/engine/reference/commandline/volume_rm/)	remove volume
 
-### Shows images/conatiners/networks/logs
+### Shows images/conatiners/networks
 - [docker images](https://docs.docker.com/engine/reference/commandline/images/)   display all images
 - [docker container ls -a]()   shows all conatiners
 - [docker network ls](https://docs.docker.com/engine/reference/commandline/network/)   shows all networks
 - [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)   shows running containers
 - [docker volume ls](https://docs.docker.com/engine/reference/commandline/volume_ls/)	shows local volumes
-- [docker-compose logs](https://docs.docker.com/compose/reference/logs/)   shows container logs based on name of service
-- [docker-compose logs -f](https://docs.docker.com/compose/reference/logs/)   shows container logs follow logs
 
 ### Create image/container/network
 - [docker build](https://docs.docker.com/engine/reference/commandline/build/)   create an image from Dockerfile
@@ -44,6 +42,8 @@
 - [docker-compose down](https://docs.docker.com/compose/reference/down/)   stop containers  
 
 ### Logs
+- [docker-compose logs](https://docs.docker.com/compose/reference/logs/)   shows container logs based on name of service
+- [docker-compose logs -f](https://docs.docker.com/compose/reference/logs/)   shows container logs follow logs
 - [sudo docker-compose logs -f --tail 100](https://docs.docker.com/engine/reference/commandline/logs/) shows application logs with a last 100 lines
 - [sudo docker-compose logs -f <service>](https://docs.docker.com/engine/reference/commandline/logs/) whows logs of a specific service
 
