@@ -48,6 +48,9 @@
 - [sudo docker-compose logs -f <service>](https://docs.docker.com/engine/reference/commandline/logs/) whows logs of a specific service
 - -d flags avoid to show all logs started services
 
+### Push or Pull
+- [sudo docker-compose pull --parallel]() pulling multiple docker images at once defined in docker-compose file
+
 ### Setup insecure registry on local docker:
 In path:
 ```
