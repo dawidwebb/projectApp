@@ -46,15 +46,19 @@
 - [docker-compose logs -f](https://docs.docker.com/compose/reference/logs/)   shows container logs follow logs
 - [sudo docker-compose logs -f --tail 100](https://docs.docker.com/engine/reference/commandline/logs/) shows application logs with a last 100 lines
 - [sudo docker-compose logs -f <service>](https://docs.docker.com/engine/reference/commandline/logs/) whows logs of a specific service
+- -d flags avoid to show all logs started services
 
 ### Setup insecure registry on local docker:
 In path:
-  '/etc/docker/daemon.json'
+```
+/etc/docker/daemon.json
+```
 Setup content:
+```
 {
     "insecure-registries" : [ "hostname.cloudapp.net:5000" ]
 }
-
+```
 Restart docker.
 
 
