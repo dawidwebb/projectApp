@@ -51,6 +51,10 @@
 ### Push or Pull
 - [sudo docker-compose pull --parallel]() pulling multiple docker images at once defined in docker-compose file
 
+### Docker swarm
+- [sudo docker service update --image <image_name> <service_name>]() update new version of service on docker swarm
+- [sudo docker service logs -f <container>]() shows logs of container
+
 ### Setup insecure registry on local docker:
 In path:
 ```
