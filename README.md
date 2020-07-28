@@ -67,6 +67,9 @@ Setup content:
 }
 ```
 Restart docker.
+```
+sudo systemctl restart docker
+```
 
 
 ## [Docker cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
