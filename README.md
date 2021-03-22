@@ -22,6 +22,7 @@
 - [docker container ls -a]()   shows all conatiners
 - [docker network ls](https://docs.docker.com/engine/reference/commandline/network/)   shows all networks
 - [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)   shows running containers
+- [docker ps --no-trunc](https://docs.docker.com/engine/reference/commandline/ps/) show the full command along with the other details of the running containers
 - [docker volume ls](https://docs.docker.com/engine/reference/commandline/volume_ls/)	shows local volumes
 
 ### Create image/container/network
