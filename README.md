@@ -5,7 +5,7 @@
 | -------------|
 |[*Manage Docker as a non root user*](#manage-docker-as-a-non-root-user)|
 |[*Manage docker images*](#manage-docker-images)|
-|[*Manage docker containers*](#manage-docker-container)|
+|[*Manage docker containers*](#manage-docker-containers)|
 |[*Manage docker volume*](#manage-docker-volume)|
 |[*Manage docker compose*](#manage-docker-compose)|
 |[*Manage docker swarm*](#manage-docker-swarm)|
@@ -159,6 +159,10 @@
 ```bash
 sudo systemctl restart docker
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+
 Sources: 
 - [Docker cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
 
