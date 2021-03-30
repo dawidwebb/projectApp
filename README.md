@@ -65,6 +65,7 @@
 - [sudo docker exec -it <name_or_container_id> bash](https://docs.docker.com/engine/reference/commandline/exec/) - access a shell and run custom commands inside a container
 - [sudo docker exec -it <name_or_container_id> cat <path/to/chosen/container/resource>](https://docs.docker.com/engine/reference/commandline/exec/) - show data inside docker container
 - [sudo docker exec -it <name_or_container_id> ls -lrt <path/to/chosen/container/directory>](https://docs.docker.com/engine/reference/commandline/exec/) - show the content of the /<path/to/chosen/container/directory> directory inside the docker conatiner
+- [docker cp <local_catalogue>:<inner_container_data_volume>](https://docs.docker.com/engine/reference/commandline/cp/) - copy volume inside a container and extract the data
 
 ### Kill container
 - [docker kill](https://docs.docker.com/engine/reference/commandline/kill/)  - kill a container
