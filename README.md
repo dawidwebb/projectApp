@@ -1,78 +1,165 @@
+# Docker cheat sheet - a couple useful commands using dokcer
 
-# Docker cheat sheet
+## Table of Contents
+| Topics | 
+| -------------|
+|[*Manage Docker as a non root user*](#manage-docker-as-a-non-root-user)|
+|[*Manage docker images*](#manage-docker-images)|
+|[*Manage docker containers*](#manage-docker-container)|
+|[*Manage docker volume*](#manage-docker-volume)|
+|[*Manage docker compose*](#manage-docker-compose)|
+|[*Manage docker swarm*](#manage-docker-swarm)|
+|[*Setup insecure registry on local docker*](#setup-insecure-registry-on-local-docker)|
 
-## A couple useful commands
 
-### Remove/kill command
-- [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)   remove an image
-- [docker rmi $(docker images -q)](https://docs.docker.com/engine/reference/commandline/rmi/)   remove all images based on ID
-- [docker rmi $(docker images -q | head -n +2)](https://docs.docker.com/engine/reference/commandline/rmi/)   remove 2 recently created images based on ID
-- [docker rmi $(docker images -q | tail -n +2)](https://docs.docker.com/engine/reference/commandline/rmi/)   remove 2 the most oldest created images based on ID
-- [docker kill](https://docs.docker.com/engine/reference/commandline/kill/)   kill a container
-- [docker container rm](https://docs.docker.com/engine/reference/commandline/container_rm/)   remove container
-- [docker container rm $(docker container ls -a -q)](https://docs.docker.com/engine/reference/commandline/container_rm/) remove all containers
-- [docker network prune](https://docs.docker.com/engine/reference/commandline/network_prune/)   remove unused networks
-- [docker network rm](https://docs.docker.com/engine/reference/commandline/network_rm/)   remove network
-- [docker image prune](https://docs.docker.com/engine/reference/commandline/image_prune/)   remove unused imges
-- [docker volume prune](https://docs.docker.com/engine/reference/commandline/volume_prune/)   remove unused volumes
-- [docker volume rm](https://docs.docker.com/engine/reference/commandline/volume_rm/)	remove volume
+# Manage Docker as a non root user
 
-### Shows images/conatiners/networks
-- [docker images](https://docs.docker.com/engine/reference/commandline/images/)   display all images
-- [docker container ls -a]()   shows all conatiners
-- [docker network ls](https://docs.docker.com/engine/reference/commandline/network/)   shows all networks
-- [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)   shows running containers
-- [docker ps --no-trunc](https://docs.docker.com/engine/reference/commandline/ps/) show the full command along with the other details of the running containers
-- [docker volume ls](https://docs.docker.com/engine/reference/commandline/volume_ls/)	shows local volumes
+[Running docker localy without sudo](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
 
-### Create image/container/network
-- [docker build](https://docs.docker.com/engine/reference/commandline/build/)   create an image from Dockerfile
-- [docker network create](https://docs.docker.com/engine/reference/commandline/network_create/)   create network based on name
-- [docker-compose build](https://docs.docker.com/compose/reference/build/)   rebuild or create images
-- [docker-compose ps](https://docs.docker.com/compose/reference/ps/)	shows running containers by docker-compose
+**[⬆ Back to Top](#table-of-contents)**
 
-### Create/starts images/contaiers
-- [docker exec](https://docs.docker.com/engine/reference/commandline/exec/) execute command within running container
-- [docker start](https://docs.docker.com/engine/reference/commandline/start/)   starts stopped container
-- [docker run](https://docs.docker.com/engine/reference/commandline/run/)     create container from image and start
+# Manage docker images
+
+### Build image
+- [docker build](https://docs.docker.com/engine/reference/commandline/build/) - build/create an image from Dockerfile
+- [docker-compose build](https://docs.docker.com/compose/reference/build/) - rebuild or create docker images
+
+### Remove images
+- [docker image prune](https://docs.docker.com/engine/reference/commandline/image_prune/) - remove unused imges
+- [docker rmi <image_name>](https://docs.docker.com/engine/reference/commandline/rmi/) - remove an image
+- [docker rmi $(docker images -q)](https://docs.docker.com/engine/reference/commandline/rmi/) - remove all images based on ID
+- [docker rmi $(docker images -q | head -n +2)](https://docs.docker.com/engine/reference/commandline/rmi/) - remove 2 recently created images based on ID
+- [docker rmi $(docker images -q | tail -n +2)](https://docs.docker.com/engine/reference/commandline/rmi/) - remove 2 the most oldest created images based on ID
+
+### Show images
+- [docker images](https://docs.docker.com/engine/reference/commandline/images/) - show all images
+- [docker images -q](https://docs.docker.com/engine/reference/commandline/images/) - show all images ID
+
+**[⬆ Back to Top](#table-of-contents)**
+
+# Manage docker containers
+
+### Start/Stop conatiner
+- [docker run](https://docs.docker.com/engine/reference/commandline/run/) - create container from image and start
 - [docker stop](https://docs.docker.com/engine/reference/commandline/stop/)   stop running container
-- [docker build](https://docs.docker.com/engine/reference/commandline/build/)     build image from Dockerfile
-- [docker restart](https://docs.docker.com/engine/reference/commandline/restart/)	restart container 
-- [docker-compose restart](https://docs.docker.com/compose/reference/restart/)	restart continer base on name of container
-- [docker-compose up](https://docs.docker.com/compose/reference/up/)   starts containers
-- [docker-compose down](https://docs.docker.com/compose/reference/down/)   stop containers  
+- [docker start](https://docs.docker.com/engine/reference/commandline/start/) - starts stopped container
+- [docker restart](https://docs.docker.com/engine/reference/commandline/restart/) - restart docker container container 
 
-### Logs
-- [docker-compose logs](https://docs.docker.com/compose/reference/logs/)   shows container logs based on name of service
-- [docker-compose logs -f](https://docs.docker.com/compose/reference/logs/)   shows container logs follow logs
-- [sudo docker-compose logs -f --tail 100](https://docs.docker.com/engine/reference/commandline/logs/) shows application logs with a last 100 lines
-- [sudo docker-compose logs -f <service>](https://docs.docker.com/engine/reference/commandline/logs/) whows logs of a specific service
+### Show containers info
+- [docker ps](https://docs.docker.com/engine/reference/commandline/ps/) - shows running/active containers
+- [sudo docker ps --format "{{.ID}}: {{.Image}} {{.Names}}"](https://docs.docker.com/engine/reference/commandline/ps/) - shows running/active containers in specific format
+- [docker ps -a | grep Exit](https://docs.docker.com/engine/reference/commandline/container_ls/) - show only stopped containers
+- [docker ps --no-trunc](https://docs.docker.com/engine/reference/commandline/ps/) show the full command along with the other details of the running containers
+- [sudo docker ps --format "{{.ID}}: {{.Image}} {{.Names}}"](https://docs.docker.com/engine/reference/commandline/ps/) - show active container in specific defined format
+- [docker ps -a --filter volume=<name_of_docker_volume>](https://docs.docker.com/engine/reference/commandline/ps/) - show which container is applied to specific volume
+
+
+- [docker container ls -a](https://docs.docker.com/engine/reference/commandline/container_ls/) - show stopped and running containers (all the containers)
+- [docker container ls -a](https://docs.docker.com/engine/reference/commandline/container_ls/) - show ID stopped and running containers (all the containers)
+- [docker container ls -f status=exited -a](https://docs.docker.com/engine/reference/commandline/container_ls/) - shows only stopped containers
+
+### Show container logs
+- [docker logs container-id](https://docs.docker.com/engine/reference/commandline/container_logs/) - shows logs of running container
+
+### Execute command on container
+- [docker exec](https://docs.docker.com/engine/reference/commandline/exec/) - execute command within running container
+- [sudo docker exec -it <name_or_container_id> bash](https://docs.docker.com/engine/reference/commandline/exec/) - access a shell and run custom commands inside a container
+- [sudo docker exec -it <name_or_container_id> cat <path/to/chosen/container/resource>](https://docs.docker.com/engine/reference/commandline/exec/) - show data inside docker container
+- [sudo docker exec -it <name_or_container_id> ls -lrt <path/to/chosen/container/directory>](https://docs.docker.com/engine/reference/commandline/exec/) - show the content of the /<path/to/chosen/container/directory> directory inside the docker conatiner
+
+### Kill container
+- [docker kill](https://docs.docker.com/engine/reference/commandline/kill/)  - kill a container
+
+### Remove containers
+- [docker container rm](https://docs.docker.com/engine/reference/commandline/container_rm/) remove container
+- [docker container rm $(docker container ls -a -q)](https://docs.docker.com/engine/reference/commandline/container_rm/) remove all containers
+
+**[⬆ Back to Top](#table-of-contents)**
+
+# Manage docker volume
+
+### Create dokcer volume
+- [docker volume create](https://docs.docker.com/engine/reference/commandline/volume_create/) - create docker volume
+- [docker volume create -name](https://docs.docker.com/engine/reference/commandline/volume_create/) - create docker volume with specific name
+
+### Remove docker volume
+- [docker volume prune](https://docs.docker.com/engine/reference/commandline/volume_prune/) - remove unused docker volumes
+
+### Shows docker volume
+- [docker volume ls](https://docs.docker.com/engine/reference/commandline/volume_ls/)- shows all local volumes
+
+### Remove docker volume
+- [docker volume rm](https://docs.docker.com/engine/reference/commandline/volume_rm/) -remove docker volume
+
+**[⬆ Back to Top](#table-of-contents)**
+
+# Manage docker network
+
+### Create docker network
+- [docker network create](https://docs.docker.com/engine/reference/commandline/network_create/) - create network based on name
+
+### Shows networks
+- [docker network ls](https://docs.docker.com/engine/reference/commandline/network/) - shows all networks
+
+### Remove docke network
+- [docker network prune](https://docs.docker.com/engine/reference/commandline/network_prune/)  - remove unused docker networks
+- [docker network rm](https://docs.docker.com/engine/reference/commandline/network_rm/) - remove docker network
+
+**[⬆ Back to Top](#table-of-contents)**
+
+# Manage docker compose
+
+### Start/Stop docker-compose
+- [docker-compose up](https://docs.docker.com/compose/reference/up/)   starts containers
+- [docker-compose down](https://docs.docker.com/compose/reference/down/)   stop containers 
+- [docker-compose restart](https://docs.docker.com/compose/reference/restart/) - restart docker continer base on name of container 
+
+###Show docker-compose containers
+- [docker-compose ps](https://docs.docker.com/compose/reference/ps/) - shows running containers by docker-compose
+
+### Show docke -compose logs
+- [docker-compose logs <container_name>](https://docs.docker.com/compose/reference/logs/) - shows container logs based on name of service
+- [docker-compose logs -f](https://docs.docker.com/compose/reference/logs/) - shows container logs follow logs
+- [docker-compose logs -f --tail 100](https://docs.docker.com/engine/reference/commandline/logs/) - shows application logs with a last 100 lines
+- [docker-compose logs -f <service>](https://docs.docker.com/engine/reference/commandline/logs/) - shows logs of a specific service
 - -d flags avoid to show all logs started services
 
-### Push or Pull
-- [sudo docker-compose pull --parallel]() pulling multiple docker images at once defined in docker-compose file
+### Pull images for docker-compose 
+- [sudo docker-compose pull --parallel]() - pulling multiple docker images at once defined in docker-compose file
 
-### Docker swarm
-- [sudo docker service update --image <image_name> <service_name>]() update new version of service on docker swarm
-- [sudo docker service logs -f <container>]() shows logs of container
+**[⬆ Back to Top](#table-of-contents)**
 
-### Setup insecure registry on local docker:
-In path:
-```
+# Manage docker swarm
+
+### Update new service
+- [sudo docker service update --image <image_name> <service_name>]() - update new version of service on docker swarm
+
+### Show container logs
+- [sudo docker service logs -f <container>]() - shows logs of container
+
+### Show swarm containers
+- [sudo docker service ps --no-trunc](https://docs.docker.com/engine/reference/commandline/ps/) show the full command along with the other details of the running containers
+
+**[⬆ Back to Top](#table-of-contents)**
+
+# Setup insecure registry on local docker
+
+1. Go into the path on your local computer:
+```bash
 /etc/docker/daemon.json
 ```
-Setup content:
-```
+2. Open deamon.json in text editor and setup content:
+```bash
 {
     "insecure-registries" : [ "hostname.cloudapp.net:5000" ]
 }
 ```
-Restart docker.
-```
+
+3. Restart docker.
+```bash
 sudo systemctl restart docker
 ```
+Sources: 
+- [Docker cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
 
-
-## [Docker cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
-
-## [Docker architecture](https://docs.docker.com/engine/docker-overview/)
+- [Docker architecture](https://docs.docker.com/engine/docker-overview/)
