@@ -11,7 +11,6 @@
 |[*Manage docker swarm*](#manage-docker-swarm)|
 |[*Setup insecure registry on local docker*](#setup-insecure-registry-on-local-docker)|
 
-
 # Manage Docker as a non root user
 
 [Running docker localy without sudo](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
@@ -87,6 +86,7 @@
 
 ### Shows docker volume
 - [docker volume ls](https://docs.docker.com/engine/reference/commandline/volume_ls/)- shows all local volumes
+- [docker ps -a --filter volume=<name_of_docker_volume>](https://docs.docker.com/engine/reference/commandline/ps/) - show which container is applied to specific volume
 
 ### Remove docker volume
 - [docker volume rm](https://docs.docker.com/engine/reference/commandline/volume_rm/) -remove docker volume
@@ -114,7 +114,7 @@
 - [docker-compose down](https://docs.docker.com/compose/reference/down/)   stop containers 
 - [docker-compose restart](https://docs.docker.com/compose/reference/restart/) - restart docker continer base on name of container 
 
-###Show docker-compose containers
+### Show docker-compose containers
 - [docker-compose ps](https://docs.docker.com/compose/reference/ps/) - shows running containers by docker-compose
 
 ### Show docke -compose logs
