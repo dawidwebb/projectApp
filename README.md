@@ -137,6 +137,7 @@
 
 ### Show container logs
 - [sudo docker service logs -f <container_name_or_id>]() - shows logs of container
+- [sudo docker service ls](https://docs.docker.com/engine/reference/commandline/logs/) - shows started containers on swarm
 
 ### Show swarm containers
 - [sudo docker service ps](https://docs.docker.com/engine/reference/commandline/service_ps/) List the tasks of one or more services
