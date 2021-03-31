@@ -5,8 +5,8 @@
 | -------------| -------------|
 |[*Manage docker images*](#manage-docker-images)|[*Manage Docker as a non root user*](#manage-docker-as-a-non-root-user)|
 |[*Manage docker containers*](#manage-docker-containers)|[*Setup insecure registry on local docker*](#setup-insecure-registry-on-local-docker)|
-|[*Manage docker volume*](#manage-docker-volume)|
-|[*Manage docker compose*](#manage-docker-compose)|
+|[*Manage docker volume*](#manage-docker-volume)|[Create own docker image](https://github.com/witosh/docker-cheat-sheet/tree/master/create-own-docker-image)|
+|[*Manage docker compose*](#manage-docker-compose)|[Tomacta on docker](https://github.com/witosh/docker-cheat-sheet/tree/master/docker-tomcat)|
 |[*Manage docker swarm*](#manage-docker-swarm)|
 
 # Manage docker images
