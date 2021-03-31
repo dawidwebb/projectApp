@@ -1,9 +1,9 @@
 # Docker cheat sheet - a couple useful commands using dokcer
 
 ## Table of Contents
-| Topics | 
-| -------------|
-|[*Manage Docker as a non root user*](#manage-docker-as-a-non-root-user)|
+| Topics | | Topics | 
+| -------------|| -------------|
+|[*Manage Docker as a non root user*](#manage-docker-as-a-non-root-user)||[*Manage Docker as a non root user*](#manage-docker-as-a-non-root-user)|
 |[*Manage docker images*](#manage-docker-images)|
 |[*Manage docker containers*](#manage-docker-containers)|
 |[*Manage docker volume*](#manage-docker-volume)|
