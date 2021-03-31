@@ -132,6 +132,10 @@
 
 # Manage docker swarm
 
+### Restat container in swarm
+- [sudo docker service scale <service_name>=0] - stop container inside swarm node
+- [sudo docker service scale <service_name>=1] - start container inside swarm node
+
 ### Update new service
 - [sudo docker service update --image <image_name> <service_name>]() - update new version of service on docker swarm
 
