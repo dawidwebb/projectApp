@@ -73,4 +73,4 @@ At the end try to restart docker container by execute two commands and previous 
 
 Now, you are able to access to manager and uplaod .war fiels.
 
-**[⬆ Back to manu](#https://github.com/witosh/docker-cheat-sheet#table-of-contents)**
+**[⬆ Back to manu](https://github.com/witosh/docker-cheat-sheet#table-of-contents)**
