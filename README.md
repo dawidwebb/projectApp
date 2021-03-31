@@ -133,8 +133,9 @@
 # Manage docker swarm
 
 ### Restat container in swarm
-- [sudo docker service scale <service_name>=0] - stop container inside swarm node
-- [sudo docker service scale <service_name>=1] - start container inside swarm node
+The scale command enables you to scale one or more replicated services either up or down to the desired number of replicas.
+- [sudo docker service scale <service_name>=0](https://docs.docker.com/engine/reference/commandline/service_scale/) - down replicated service inside swarm node
+- [sudo docker service scale <service_name>=1](https://docs.docker.com/engine/reference/commandline/service_scale/) - up replicated service inside swarm node
 
 ### Update new service
 - [sudo docker service update --image <image_name> <service_name>]() - update new version of service on docker swarm
