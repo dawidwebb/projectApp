@@ -35,6 +35,7 @@
 - [docker stop](https://docs.docker.com/engine/reference/commandline/stop/) - stop running container
 - [docker start](https://docs.docker.com/engine/reference/commandline/start/) - starts stopped container
 - [docker restart](https://docs.docker.com/engine/reference/commandline/restart/) - restart docker container container 
+- [docker start $(docker container ls -a -q --filter name=<container_name>)](https://docs.docker.com/engine/reference/commandline/start/) - start container by given name
 
 ### Show containers info
 - [docker ps](https://docs.docker.com/engine/reference/commandline/ps/) - shows running/active containers
@@ -46,7 +47,7 @@
 
 
 - [docker container ls -a](https://docs.docker.com/engine/reference/commandline/container_ls/) - show stopped and running containers (all the containers)
-- [docker container ls -a](https://docs.docker.com/engine/reference/commandline/container_ls/) - show ID stopped and running containers (all the containers)
+- [docker container ls -a -q](https://docs.docker.com/engine/reference/commandline/container_ls/) - show ID stopped and running containers (all the containers)
 - [docker container ls -f status=exited -a](https://docs.docker.com/engine/reference/commandline/container_ls/) - shows only stopped containers
 
 ### Show container logs
