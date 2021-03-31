@@ -1,21 +1,13 @@
 # Docker cheat sheet - a couple useful commands using dokcer
 
 ## Table of Contents
-| Topics | | Topics | 
-| -------------|| -------------|
-|[*Manage Docker as a non root user*](#manage-docker-as-a-non-root-user)||[*Manage Docker as a non root user*](#manage-docker-as-a-non-root-user)|
-|[*Manage docker images*](#manage-docker-images)|
-|[*Manage docker containers*](#manage-docker-containers)|
+| Commands |  Projects and topics | 
+| -------------| -------------|
+|[*Manage docker images*](#manage-docker-images)|[*Manage Docker as a non root user*](#manage-docker-as-a-non-root-user)|
+|[*Manage docker containers*](#manage-docker-containers)|[*Setup insecure registry on local docker*](#setup-insecure-registry-on-local-docker)|
 |[*Manage docker volume*](#manage-docker-volume)|
 |[*Manage docker compose*](#manage-docker-compose)|
 |[*Manage docker swarm*](#manage-docker-swarm)|
-|[*Setup insecure registry on local docker*](#setup-insecure-registry-on-local-docker)|
-
-# Manage Docker as a non root user
-
-[Running docker localy without sudo](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
-
-**[⬆ Back to Top](#table-of-contents)**
 
 # Manage docker images
 
@@ -147,6 +139,12 @@ The scale command enables you to scale one or more replicated services either up
 ### Show swarm containers
 - [sudo docker service ps](https://docs.docker.com/engine/reference/commandline/service_ps/) List the tasks of one or more services
 - [sudo docker service ps --no-trunc](https://docs.docker.com/engine/reference/commandline/service_ps/) show the full command along with the other details of the running containers
+
+**[⬆ Back to Top](#table-of-contents)**
+
+# Manage Docker as a non root user
+
+[Running docker localy without sudo](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
 
 **[⬆ Back to Top](#table-of-contents)**
 
