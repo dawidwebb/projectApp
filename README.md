@@ -136,10 +136,11 @@
 - [sudo docker service update --image <image_name> <service_name>]() - update new version of service on docker swarm
 
 ### Show container logs
-- [sudo docker service logs -f <container>]() - shows logs of container
+- [sudo docker service logs -f <container_name_or_id>]() - shows logs of container
 
 ### Show swarm containers
-- [sudo docker service ps --no-trunc](https://docs.docker.com/engine/reference/commandline/ps/) show the full command along with the other details of the running containers
+- [sudo docker service ps](https://docs.docker.com/engine/reference/commandline/service_ps/) List the tasks of one or more services
+- [sudo docker service ps --no-trunc](https://docs.docker.com/engine/reference/commandline/service_ps/) show the full command along with the other details of the running containers
 
 **[⬆ Back to Top](#table-of-contents)**
 
