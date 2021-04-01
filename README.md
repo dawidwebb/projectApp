@@ -7,7 +7,7 @@
 |[*Manage docker containers*](#manage-docker-containers)|[*Setup insecure registry on local docker*](#setup-insecure-registry-on-local-docker)|
 |[*Manage docker volume*](#manage-docker-volume)|[Create own docker image](https://github.com/witosh/docker-cheat-sheet/tree/master/create-own-docker-image)|
 |[*Manage docker compose*](#manage-docker-compose)|[Tomacta on docker](https://github.com/witosh/docker-cheat-sheet/tree/master/docker-tomcat)|
-|[*Manage docker swarm*](#manage-docker-swarm)|
+|[*Manage docker swarm*](#manage-docker-swarm)|[Jenkins on decker](https://github.com/witosh/learn-by-examples/blob/master/continuous-delivery/jenkins-on-docker/README.md#how-to-run-jenkins-on-docker)|
 
 # Manage docker images
 
