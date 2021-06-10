@@ -2,6 +2,7 @@
 
 ## Dockerfile
 
+**Dockerfile** - list of steps how to create image.
 To create docker images we need to define file calls **Dockerfile**. It's configuration file consist of instructions (steps) which take part in image build.
 
 Description and gal of each layer:
