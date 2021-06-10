@@ -37,9 +37,13 @@
 - [docker start](https://docs.docker.com/engine/reference/commandline/start/) - starts stopped container
 - [docker restart](https://docs.docker.com/engine/reference/commandline/restart/) - restart docker container container 
 - [docker start $(docker container ls -a -q --filter name=<container_name>)](https://docs.docker.com/engine/reference/commandline/start/) - start container by given name
+- [docker run -p 8080:80](https://docs.docker.com/engine/reference/commandline/run/) - map 8080 port of host to port 80 of container (now container will be available under localhost:8080)
+- [docker run -p 8080:80 -p 8081:80](https://docs.docker.com/engine/reference/commandline/run/) - multiple map (now container is available under two ports)
+- [docker run --name <new_container_name>](https://docs.docker.com/engine/reference/commandline/run/) - setup name of container
 
 ### Show containers info
 - [docker ps](https://docs.docker.com/engine/reference/commandline/ps/) - shows running/active containers
+- [docker ps -format="ID\t{{.ID}}\nNAME\t{{.NAME}}"](https://docs.docker.com/engine/reference/commandline/ps/) - shows running/active containers in formatted way
 - [sudo docker ps --format "{{.ID}}: {{.Image}} {{.Names}}"](https://docs.docker.com/engine/reference/commandline/ps/) - shows running/active containers in specific format
 - [docker ps -a | grep Exit](https://docs.docker.com/engine/reference/commandline/container_ls/) - show only stopped containers
 - [docker ps --no-trunc](https://docs.docker.com/engine/reference/commandline/ps/) show the full command along with the other details of the running containers
