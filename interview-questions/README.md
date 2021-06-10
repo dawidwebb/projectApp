@@ -9,6 +9,7 @@
 |[*Docker volumes*](#docker-volumes)|
 |[*Share volume between containers*](#share-volume-between-containers)|
 |[*Exposing port*](#exposing-port)|
+|[*Dockerfile*](#dockerfile)|
 |[*Exposing multiple ports*](#exposing-multiple-port)|
 |[*Naming docker conatiners*](#naming-docker-conatiners)|
 |[*Docker ps formatting*](#docker-ps-formatting)|
@@ -56,6 +57,12 @@ Add a flag -d:
 
 ### Docker volumes
 Allows sharing of data. Files and folder, between host and container. Between containers.
+**[⬆ Back to Top](#table-of-contents)**
+
+### Dockerfile
+
+**Dockerfile** - list of steps how to create image.
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Exposing port
