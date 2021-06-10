@@ -6,6 +6,7 @@
 |[*Docker image*](#docker-image)|
 |[*Docker container*](#docker-container)|
 |[*Run docker container*](#run-docker-container)|
+|[*Exposing port](#exposing-port)|
 
 ### Docker image
 
@@ -26,19 +27,32 @@ Running instance of an Image.
 ### Run docker container
 
 Let's pull image from docker registry in this case docker hub:
-[docker pull nginx](https://hub.docker.com/_/nginx) - pull nginx image
+- [docker pull nginx](https://hub.docker.com/_/nginx) - pull nginx image
 
 Check if image is availabe right know:
-[docker images | grep nginx]() - viewing pulled image
+- [docker images | grep nginx]() - viewing pulled image
 
 Then we pass:
-[docker run nginx:latest]() - running a nginx container
+- [docker run nginx:latest]() - running a nginx container
 
 Check if conatiner is running:
-[ docker container ls]() - view running nginx container
+- [docker container ls]() - view running nginx container
 
 Add a flag -d:
-[docker run -d  nginx:latest]() - run the container in detached mode
+- [docker run -d  nginx:latest]() - run the container in detached mode
  
 **[⬆ Back to Top](#table-of-contents)**
 
+### Exposing port
+
+Stop the container if is running:
+- [docker stop <container_id>]() - stops a container
+
+We want to expose hostport tcp/80 to map that port localhost 8080:
+[docker run -d -p 8080:80  nginx:latest]() - expose port to localhost
+
+If we exec **docker ps** we get PORT: 0.0.0.0:8080->80/tcp for newly started nginx.
+
+Map localhost 8080 **0.0.0.0:8080** to port 80/tcp inside this container.
+
+**[⬆ Back to Top](#table-of-contents)**
