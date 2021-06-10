@@ -6,7 +6,8 @@
 |[*Docker image*](#docker-image)|
 |[*Docker container*](#docker-container)|
 |[*Run docker container*](#run-docker-container)|
-|[*Exposing port](#exposing-port)|
+|[*Exposing port*](#exposing-port)|
+|[*Exposing multiple ports*](#exposing-multiple-port)|
 
 ### Docker image
 
@@ -54,5 +55,13 @@ We want to expose hostport tcp/80 to map that port localhost 8080:
 If we exec **docker ps** we get PORT: 0.0.0.0:8080->80/tcp for newly started nginx.
 
 Map localhost 8080 **0.0.0.0:8080** to port 80/tcp inside this container.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+
+### Exposing multiple port
+
+Just add another -p flag:
+[[docker run -d -p 8080:80  -p 3000:80 nginx:latest]() - expose port to localhost]()
 
 **[⬆ Back to Top](#table-of-contents)**
