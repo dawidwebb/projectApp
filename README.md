@@ -32,6 +32,7 @@
 
 ### Start/Stop conatiner
 - [docker run](https://docs.docker.com/engine/reference/commandline/run/) - create container from image and start
+- [docker run -d](https://docs.docker.com/engine/reference/commandline/run/) - create container from image and start in detached mode
 - [docker stop](https://docs.docker.com/engine/reference/commandline/stop/) - stop running container
 - [docker start](https://docs.docker.com/engine/reference/commandline/start/) - starts stopped container
 - [docker restart](https://docs.docker.com/engine/reference/commandline/restart/) - restart docker container container 
