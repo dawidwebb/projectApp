@@ -7,6 +7,7 @@
 |[*Docker container*](#docker-container)|
 |[*Run docker container*](#run-docker-container)|
 |[*Docker volumes*](#docker-volumes)|
+|[*Tags version and tagging*](#tags-version-and-tagging)|
 |[*Share volume between containers*](#share-volume-between-containers)|
 |[*Exposing port*](#exposing-port)|
 |[*Dockerfile*](#dockerfile)|
@@ -57,6 +58,15 @@ Add a flag -d:
 
 ### Docker volumes
 Allows sharing of data. Files and folder, between host and container. Between containers.
+**[⬆ Back to Top](#table-of-contents)**
+
+### Tags version and tagging
+
+Allows you to control image version.
+Avoid breaking changes.
+Safe.
+You have control on mage version.
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Dockerfile
