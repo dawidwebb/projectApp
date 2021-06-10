@@ -6,7 +6,8 @@
 |[*Docker image*](#docker-image)|
 |[*Docker container*](#docker-container)|
 |[*Run docker container*](#run-docker-container)|
-|[*Docker volumes*](#Docker volumes*)|
+|[*Docker volumes*](#docker-volumes)|
+|[*Share volume between containers*](#share-volume-between-containers)|
 |[*Exposing port*](#exposing-port)|
 |[*Exposing multiple ports*](#exposing-multiple-port)|
 |[*Naming docker conatiners*](#naming-docker-conatiners)|
@@ -25,6 +26,12 @@ Has everything need to run your apps. Operation system, required dependencies, a
 ### Docker container
 
 Running instance of an **Image**.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Share volume between containers
+
+Add --volumes-from flag and name of container.
 
 **[⬆ Back to Top](#table-of-contents)**
 
