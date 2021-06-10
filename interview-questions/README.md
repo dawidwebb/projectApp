@@ -6,6 +6,7 @@
 |[*Docker image*](#docker-image)|
 |[*Docker container*](#docker-container)|
 |[*Run docker container*](#run-docker-container)|
+|[*Docker volumes*](#Docker volumes*)|
 |[*Exposing port*](#exposing-port)|
 |[*Exposing multiple ports*](#exposing-multiple-port)|
 |[*Naming docker conatiners*](#naming-docker-conatiners)|
@@ -44,6 +45,10 @@ Check if conatiner is running:
 Add a flag -d:
 - [docker run -d  nginx:latest]() - run the container in detached mode
  
+**[⬆ Back to Top](#table-of-contents)**
+
+### Docker volumes
+Allows sharing of data. Files and folder, between host and container. Between containers.
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Exposing port
