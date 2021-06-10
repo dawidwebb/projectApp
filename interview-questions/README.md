@@ -8,6 +8,8 @@
 |[*Run docker container*](#run-docker-container)|
 |[*Exposing port*](#exposing-port)|
 |[*Exposing multiple ports*](#exposing-multiple-port)|
+|[*Naming docker conatiners*](#naming-docker-conatiners)|
+|[*Docker ps formatting*](#docker-ps-formatting)|
 
 ### Docker image
 
@@ -21,7 +23,7 @@ Has everything need to run your apps. Operation system, required dependencies, a
 
 ### Docker container
 
-Running instance of an Image.
+Running instance of an **Image**.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -62,6 +64,18 @@ Map localhost 8080 **0.0.0.0:8080** to port 80/tcp inside this container.
 ### Exposing multiple port
 
 Just add another -p flag:
-[[docker run -d -p 8080:80  -p 3000:80 nginx:latest]() - expose port to localhost]()
+[docker run -d -p 8080:80  -p 3000:80 nginx:latest]() - expose port to localhost]()
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Naming docker conatiners
+
+[docker run --name website -d -p 8080:80  -p 3000:80 nginx:latest]() - naming container with --name flag
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Docker ps formatting
+
+Add ---format flag to **docker ps** and then "ID\t{{.ID}}\nNAME\t{{.NAME}}"  etc.
 
 **[⬆ Back to Top](#table-of-contents)**
