@@ -8,6 +8,7 @@
 |[*Run docker container*](#run-docker-container)|
 |[*Docker volumes*](#docker-volumes)|
 |[*Tags version and tagging*](#tags-version-and-tagging)|
+|[*Docker registry*](#docker-registry)|
 |[*Share volume between containers*](#share-volume-between-containers)|
 |[*Exposing port*](#exposing-port)|
 |[*Dockerfile*](#dockerfile)|
@@ -66,6 +67,14 @@ Allows you to control image version.
 Avoid breaking changes.
 Safe.
 You have control on mage version.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### Docker registry
+
+Higly scalable server side application that stores and lest you distribute Docker images.
+Used in yout CD/CI pipeline
+Run your application
 
 **[⬆ Back to Top](#table-of-contents)**
 
